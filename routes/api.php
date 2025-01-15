@@ -57,4 +57,11 @@ Route::middleware('auth:sanctum')->get('/verifyAdmin', [AdminController::class, 
 Route::middleware('auth:sanctum')->get('/getUsers', [UsuariosControler::class, 'indexAPI']);
 
 
+// cambios
+Route::middleware('auth:sanctum')->get('/rol', [RolController::class, 'indexAPI']);
+Route::middleware('auth:sanctum')->post('/rol', [RolController::class, 'storeAPI']);
+Route::middleware('auth:sanctum')->get('/rol/{id}', action: [RolController::class, 'getAPI']);
+Route::middleware('auth:sanctum')->delete('/rol/{id}', [RolController::class, 'deleteAPI']);
+Route::middleware('auth:sanctum')->put('/rol/{id}', [RolController::class, 'updateAPI']);
+
 
