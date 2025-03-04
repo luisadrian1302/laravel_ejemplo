@@ -17,8 +17,6 @@ class GastosController extends Controller
 
         $categories = Gastos::with(['categoria', 'usuario'])->get();
         // Gasto:)
-        Log::info(' El usuario '.$user->name.' con el rol '.$user->rol.' acaba de obtener todos los gastos ');
-
         return $categories;
     }
 
